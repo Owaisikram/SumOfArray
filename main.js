@@ -1,24 +1,20 @@
 
-const matrix1 = [
-    [0, 2, 5],
-    [5, 0, 6],
-    [1, 0, 0],
-  ];
-  const matrix2 = [
-    [0, 2, 1],
-    [5, 0, 2],
-    [1, 0, 19],
-  ];
+const nums = [10,10,10];
 
-  const sumArray = []
-  for (let i = 0; i < matrix1.length ; i++) {
+function average(nums){
 
-    const row = [];
-    for (let j = 0; j < matrix2.length ; j++) {
-      row.push(matrix1[i][j] + matrix2[i][j]);
-    }
-    sumArray.push(row);
+  let total = 0
+
+  for (let i = 0; i < nums.length; i++){
+
+    total += nums[i]; 
   }
 
-  console.log(sumArray);
-  
+  const sum = total / nums.length;
+  return sum;
+
+}
+
+const result = average(nums)
+
+console.log("result",result);
